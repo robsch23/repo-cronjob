@@ -1,9 +1,10 @@
-name: Cron CURL
+name: Cron BPV
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # ogni 5 minuti
-
+    - cron: "*/15 * * * *"  # ogni 5 minuti
+  workflow_dispatch:
+  
 jobs:
   cron_render:
     runs-on: ubuntu-latest
