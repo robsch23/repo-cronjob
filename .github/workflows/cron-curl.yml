@@ -2,8 +2,7 @@ name: Cron CURL
 
 on:
   schedule:
-    - cron: "*/15 * * * *"  # ogni 5 minuti
-  workflow_dispatch:  # permette di far partire manualmente
+    - cron: "*/5 * * * *"  # ogni 5 minuti
 
 jobs:
   cron_render:
