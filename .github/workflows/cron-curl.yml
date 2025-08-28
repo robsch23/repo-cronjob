@@ -2,12 +2,12 @@ name: Cron CURL
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # ogni 5 minuti
+    - cron: "*/15 * * * *"  # ogni 5 minuti
   workflow_dispatch:  # permette di far partire manualmente
 
 jobs:
-  curl_job:
+  cron_render:
     runs-on: ubuntu-latest
     steps:
-      - name: CURL to endpoint
+      - name: CURL to Render BE Bpv
         run: curl -s https://bpv-gestionale-fastapi-dev.onrender.com/
